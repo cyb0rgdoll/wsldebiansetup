@@ -112,6 +112,25 @@ add Oh My Zsh
 
         sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## Install Yarn
+
+        curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+        echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+        sudo apt update && sudo apt install yarn -y
+
+## Add starting directory
+
+All the Linux distros I use start in the Windows C drive for some reason at /mnt/c/Users/username.
+
+It can be really easy to start creating projects there but because it’s on the Windows file system, running projects from there will be a lot slower than running them from the native partition.
+
+        # cd to the home directory
+        ~
+        # Open the zshrc file
+        nano ~/.zshrc
+        # add this at the bottom
+        cd ~/repos
+
 ## Docker
 
  Kick things off by updating the packages index and installing dependencies.
@@ -172,8 +191,15 @@ A short trip back to the Windows side!
 
 The previous way to do Docker-y things all happened through the Linux terminal. While this is fine, the Docker Desktop for Windows application integrates with WSL2 quite well and provides a GUI.
 
+If you start a docker container in your (Linux) terminal, it will appear in, and can be controlled through the interface.
 
-## GUI 
+e.g. Running the getting-started docker container in the Linux terminal
+
+        docker run -dp 80:80 docker/getting-started
+
+will make the container appear in the interface, where it can be opened in a browser, stopped, restarted, …
+
+## REMOTE DESKTOP - GUI (UNDER CONSTRUCTION)
 
         sudo apt-get purge xrdp
 
