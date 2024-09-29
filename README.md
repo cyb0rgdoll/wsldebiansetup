@@ -40,9 +40,9 @@ To list out my WSL instances I’ll use the _wsl -l -v_ command:
     # in my case
     wsl --set-version Ubuntu 2
 
- install for Windows are: VSCode and git for Windows. Remember to set the autocrlf setting to input for git. VSCode handles it well.
+## VSCode and git for Windows
 
-Open a terminal in Windows!
+Remember to set the autocrlf setting to input for git. VSCode handles it well. Open a terminal in Windows!
 
     git config --global core.autocrlf input
 
@@ -57,7 +57,7 @@ More preparation, installing build tools for node-gyp
 
     sudo apt install build-essential
 
-Git
+## Git
 
     This one should also be installed on the Linux side.
 
@@ -68,11 +68,9 @@ Especially setting the autocrlf setting to input is important here.
 
     git config --global core.autocrlf input
 
-Node & NPM
+## Node & NPM
 
-You can install it as a standalone package.
-
-Now we can harness all those Linux-y tools, I’ll use nvm instead to make using different versions easier.
+You can install it as a standalone package. Now we can harness all those Linux-y tools, I’ll use nvm instead to make using different versions easier.
 
 The nvm repo has excellent installation instructions.
 
@@ -103,8 +101,7 @@ When the project you are working on requires a different version of node, specif
     # or if the project has a valid .nvmrc file
     nvm use
 
-Having to do that manually seems annoying right?
-Many solutions to this annoyance exist. Later in this post that annoyance will be dealt with.
+Having to do that manually seems annoying right? Many solutions to this annoyance exist. Later in this post that annoyance will be dealt with.
 
 ## Docker
 
@@ -143,7 +140,7 @@ For me that was not the case so I started it manually.
 
     sudo docker run hello-world
 
-Docker Compose
+## Docker Compose
 
 As a handy tool for managing docker containers, docker-compose is frequently installed alongside docker-ce.
 
