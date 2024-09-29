@@ -2,9 +2,7 @@
 
 Setting up WSL Debian - setup and GUI etc
 
-To use WSL2, Windows 10 has to be updated to version 2004 (Build 10941) or higher.
-
-        Run Windows update
+To use WSL2, Windows 10 has to be updated to version 2004 (Build 10941) or higher. Run Windows update
 
         Check your Windows version by opening the “Run” dialog (Windows key + R) and entering winver.
     
