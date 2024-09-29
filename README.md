@@ -50,8 +50,7 @@ Before beginning to install Linux tools, we’ll update our already installed pa
 
 From this point on, the action happens in your Linux terminal!
 
-    sudo apt update
-    sudo apt upgrade
+    sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 More preparation, installing build tools for node-gyp
 
@@ -101,7 +100,17 @@ When the project you are working on requires a different version of node, specif
     # or if the project has a valid .nvmrc file
     nvm use
 
-Having to do that manually seems annoying right? Many solutions to this annoyance exist. Later in this post that annoyance will be dealt with.
+# Install zsh - GUI goodness
+
+        sudo apt install zsh -y
+        
+set Zsh to default shell
+
+        chsh -s $(which zsh)
+        
+add Oh My Zsh
+
+        sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Docker
 
